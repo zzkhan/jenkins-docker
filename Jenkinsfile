@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script{
                     docker.withTool('default') {
-                        docker.build("mip/test-image")
+                        docker.build("mip/test-image", "-f docker-files/test/Dockerfile .")
                     }
                 }
             }

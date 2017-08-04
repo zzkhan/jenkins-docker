@@ -9,7 +9,7 @@ pipeline {
                     }
                 }
             }
-        }
+        },
         stage('Push image') {
                 script {
                     /* Finally, we'll push the image with two tags:

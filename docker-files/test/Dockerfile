@@ -1,6 +1,9 @@
 FROM python:3.4-alpine
 
-ADD . /code
+RUN echo pwd
+
+COPY requirements.txt /code/
+COPY app.py /code/
 
 WORKDIR /code
 

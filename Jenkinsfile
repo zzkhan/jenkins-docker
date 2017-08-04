@@ -17,8 +17,10 @@ pipeline {
                      * First, the incremental build number from Jenkins
                      * Second, the 'latest' tag.
                      * Pushing multiple tags is cheap, as all the layers are reused. */
-                    docker.withRegistry('http://172.17.0.3:5000') {
-                        app.push("latest")
+                     docker.withTool('default') {
+                        docker.withRegistry('http://172.17.0.3:5000') {
+                            app.push("latest")
+                        }
                     }
                 }
             }

@@ -9,8 +9,9 @@ pipeline {
                     }
                 }
             }
-        },
+        }
         stage('Push image') {
+            steps {
                 script {
                     /* Finally, we'll push the image with two tags:
                      * First, the incremental build number from Jenkins
@@ -21,5 +22,6 @@ pipeline {
                     }
                 }
             }
+        }
     }
 }
